@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradient Simplifier</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="shared.js"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <h1>CSS Gradient Simplifier</h1>
+    <textarea id="input-gradient" rows="4" cols="50" placeholder="Enter your CSS gradient here, e.g., linear-gradient(to right, red 0%, yellow 25%, lime 50%, cyan 75%, blue 100%)"></textarea>
+    <br>
+    <label for="max-stops">Number of Stops: </label>
+    <input type="number" id="max-stops" min="2" max="10" value="5">
+    <br>
+    <label for="max-iterations">Max Iterations: </label>
+    <input type="number" id="max-iterations" min="1000" max="100000" value="10000">
+    <br>
+    <button id="simplify">Simplify Gradient</button>
+
+    <h2>Original Gradient</h2>
+    <div id="original-gradient" class="gradient-preview"></div>
+
+    <h2>Simplified Gradient</h2>
+    <div id="simplified-gradient" class="gradient-preview"></div>
+    <pre id="simplified-css"></pre>
+    <div id="simplified-error"></div>
+
+    <h2>Rounded Simplified Gradient (3 significant digits)</h2>
+    <div id="rounded-simplified-gradient" class="gradient-preview"></div>
+    <pre id="rounded-simplified-css"></pre>
+    <div id="rounded-error"></div>
+
+    <div id="progress-bar" style="display: none;">
+        <span id="progress-bar-fill" style="width: 0%;"></span>
+    </div>
+</body>
+</html>
